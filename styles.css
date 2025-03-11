@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+#login-screen, #habit-screen {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 600px;
+    width: 100%;
+}
+
+input, button, select {
+    display: block;
+    margin: 10px auto;
+    padding: 8px;
+    width: 200px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.habit-item {
+    padding: 10px;
+    margin: 5px;
+    background: #e9ecef;
+    border-radius: 5px;
+    user-select: none;
+}
+
+#view-controls button {
+    display: inline-block;
+    width: auto;
+    margin: 5px;
+}
+
+#calendar-view {
+    margin-top: 20px;
+}
+
+.calendar-grid {
+    display: grid;
+    gap: 5px;
+    margin: 10px auto;
+}
+
+.week-grid {
+    grid-template-columns: repeat(7, 1fr);
+    max-width: 350px;
+}
+
+.month-grid {
+    grid-template-columns: repeat(7, 1fr);
+    max-width: 350px;
+}
+
+.year-grid {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 400px;
+}
+
+.day, .month {
+    padding: 10px;
+    text-align: center;
+    background: #e9ecef;
+    border-radius: 5px;
+}
+
+.completed {
+    background: #28a745;
+    color: white;
+}
+
+.missed {
+    background: #dc3545;
+    color: white;
+}
+
+#custom-days label {
+    display: inline-block;
+    margin: 5px;
+}

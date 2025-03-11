@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streaks</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="login-screen">
+        <h1>Streaks</h1>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+    </div>
+
+    <div id="habit-screen" style="display: none;">
+        <h1>Streaks</h1>
+        <button onclick="logout()">Logout</button>
+        
+        <div id="view-controls">
+            <button onclick="showView('week')">Week</button>
+            <button onclick="showView('month')">Month</button>
+            <button onclick="showView('year')">Year</button>
+        </div>
+
+        <div id="habit-list"></div>
+        <div id="calendar-view"></div>
+
+        <input type="text" id="new-habit" placeholder="New Habit">
+        <select id="frequency">
+            <option value="daily">Daily</option>
+            <option value="weekly">Weekly</option>
+            <option value="custom">Custom Days</option>
+        </select>
+        <div id="custom-days" style="display: none;">
+            <label><input type="checkbox" value="0"> Sun</label>
+            <label><input type="checkbox" value="1"> Mon</label>
+            <label><input type="checkbox" value="2"> Tue</label>
+            <label><input type="checkbox" value="3"> Wed</label>
+            <label><input type="checkbox" value="4"> Thu</label>
+            <label><input type="checkbox" value="5"> Fri</label>
+            <label><input type="checkbox" value="6"> Sat</label>
+        </div>
+        <button onclick="addHabit()">Add Habit</button>
+        <div id="progress">Current Streak: <span id="streak">0</span> days</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
